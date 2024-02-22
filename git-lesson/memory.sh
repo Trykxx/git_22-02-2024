@@ -83,7 +83,7 @@ git branch -m nom_branche
 git branch -d nom_branche
 
 # ------------------------------ #
-#           BRANCHES
+#           RESTORE
 # ------------------------------ #
 
 # Restaure le fichier a l'état du dernier commit.
@@ -94,3 +94,21 @@ git restore --staged nom_fichier
 
 # Créé un nouveau commit a partir du commit spécifié
 git revert id_commit
+
+
+# ------------------------------ #
+#           REMOTE
+# ------------------------------ #
+
+# Etablir une connexion avec un depot distant en lui attribuant un nom et une URL.
+git remote add alias url 
+
+# En liant la branche locale avec la branche distante 
+# Envoi le contenu du depot local vers le dépôt distant 
+git push -u alias nom_branche
+
+# Envoi le contenu du depot local vers le depot distant 
+git push
+
+# Recupere tout l'historique du depot distant et incorpore les modifications 
+git pull 
